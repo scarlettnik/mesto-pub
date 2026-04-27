@@ -8,8 +8,8 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mesto</title>
-    <script type="module" crossorigin src="./assets/index-BRBvUYUX.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Bv6q5XS-.css">
+    <script type="module" crossorigin src="./assets/index-DCxsHKtX.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DixnHYya.css">
   </head>
   <body class="page">
     <div class="page__content">
@@ -52,6 +52,8 @@
                 placeholder="Имя"
                 minlength="2"
                 maxlength="40"
+                pattern="[A-Za-zА-Яа-яЁё -]+"
+                data-error-message="Разрешены только латинские, кириллические буквы, дефис и пробелы"
                 required
               />
               <span id="user-name-error" class="popup__error"></span>
@@ -69,7 +71,11 @@
               />
               <span id="user-description-error" class="popup__error"></span>
             </label>
-            <button type="submit" class="button popup__button">
+            <button
+              type="submit"
+              class="button popup__button popup__button_disabled"
+              disabled
+            >
               Сохранить
             </button>
           </form>
@@ -88,8 +94,10 @@
                 id="place-name"
                 class="popup__input popup__input_type_card-name"
                 placeholder="Название"
-                minlength="1"
+                minlength="2"
                 maxlength="30"
+                pattern="[A-Za-zА-Яа-яЁё -]+"
+                data-error-message="Разрешены только латинские, кириллические буквы, дефис и пробелы"
                 required
               />
               <span id="place-name-error" class="popup__error"></span>
@@ -105,7 +113,11 @@
               />
               <span id="place-link-error" class="popup__error"></span>
             </label>
-            <button type="submit" class="button popup__button">
+            <button
+              type="submit"
+              class="button popup__button popup__button_disabled"
+              disabled
+            >
               Создать
             </button>
           </form>
@@ -148,7 +160,11 @@
               />
               <span id="user-avatar-error" class="popup__error"></span>
             </label>
-            <button type="submit" class="button popup__button">
+            <button
+              type="submit"
+              class="button popup__button popup__button_disabled"
+              disabled
+            >
               Сохранить
             </button>
           </form>
